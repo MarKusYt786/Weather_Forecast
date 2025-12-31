@@ -1,0 +1,88 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(to right, #00c6ff, #0072ff);
+    color: #fff;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    transition: background 1s ease-in-out;
+}
+
+.container {
+    text-align: center;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(10px);
+    animation: fadeIn 1s ease-in-out;
+    transition: transform 0.3s ease-in-out;
+}
+
+.container:hover {
+    transform: scale(1.05);
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+#city {
+    padding: 10px;
+    width: 80%;
+    max-width: 300px;
+    border: none;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    outline: none;
+    transition: background 0.3s ease-in-out;
+}
+
+#city:focus {
+    background: rgba(255, 255, 255, 0.8);
+}
+
+#city:hover {
+    background: rgba(255, 255, 255, 0.8);
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #0072ff;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+button:hover {
+    background-color: #005fcc;
+    transform: scale(1.1);
+}
+
+#weather {
+    margin-top: 20px;
+    animation: slideUp 0.5s ease-in-out;
+}
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
